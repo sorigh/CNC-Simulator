@@ -1,0 +1,59 @@
+%
+
+G21              ; Set units to millimeters
+G90              ; Absolute positioning
+
+; Start at the tail
+G00 X100 Y200    ; Rapid move to starting position
+G01 Z-5          ; Lower the tool
+
+; Draw the body
+G01 X150 Y200    ; Move to right side of body
+G01 X180 Y250    ; Upper right side of the body
+G01 X200 Y250    ; Top right corner
+G01 X220 Y230    ; Right side of the body
+G01 X200 Y200    ; Back to starting point
+G01 X150 Y200    ; Close the body
+
+; Draw the legs
+G01 X140 Y180    ; Left front leg
+G01 X120 Y180    ; Bottom of the left front leg
+G01 X120 Y160    ; Left back leg
+G01 X140 Y160    ; Bottom of the left back leg
+
+G01 X180 Y180    ; Right front leg
+G01 X200 Y180    ; Bottom of the right front leg
+G01 X200 Y160    ; Right back leg
+G01 X180 Y160    ; Bottom of the right back leg
+
+; Draw the head
+G01 X180 Y250    ; Head top
+G01 X190 Y270    ; Right side of the head
+G01 X210 Y270    ; Right upper side of the head
+G01 X220 Y250    ; Right side of the head
+G01 X210 Y230    ; Head bottom right
+G01 X190 Y230    ; Head bottom left
+G01 X180 Y250    ; Close the head
+
+; Draw the ears
+G00 X160 Y270    ; Move to the left ear
+G01 X150 Y280    ; Left ear upper
+G01 X160 Y290    ; Left ear side
+G01 X170 Y280    ; Right ear side
+G01 X160 Y270    ; Back to left ear
+
+G00 X230 Y270    ; Move to the right ear
+G01 X220 Y280    ; Right ear upper
+G01 X230 Y290    ; Right ear side
+G01 X240 Y280    ; Right ear side
+G01 X230 Y270    ; Back to right ear
+
+; Draw the tail
+G00 X100 Y220    ; Move to tail start
+G01 X80 Y240     ; Tail end
+G01 X90 Y250     ; Tail middle
+G01 X100 Y220    ; Back to start
+
+G00 Z5           ; Lift tool up
+M30              ; End of program
+%
